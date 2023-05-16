@@ -1,0 +1,22 @@
+.hero-img {
+    height: 30rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+}
+
+.card-inner {
+    height: 100px;
+    width: 250px;
+}
+
+.card-container img {
+    width: 7rem;
+    margin: auto;
+    height: 150px;
+}
