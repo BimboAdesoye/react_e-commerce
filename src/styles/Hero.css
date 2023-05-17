@@ -1,18 +1,15 @@
 .hero-img {
-    height: 30rem;
+    height: 32.5rem;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    place-content: center;
-    place-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .card-inner {
     height: 100px;
-    width: 250px;
 }
 
 .card-container img {

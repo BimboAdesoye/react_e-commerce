@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const UseFetch = (url) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null)
 
   let fetcher = async () => {
     try {
@@ -14,6 +15,7 @@ const UseFetch = (url) => {
       setData(response);
     } catch (error) {
       console.log(error);
+      setError(error)
     } finally {
       setLoading(false);
     }
@@ -22,7 +24,7 @@ const UseFetch = (url) => {
     fetcher();
   }, []);
 
-  return {data, loading};
+  return {data, loading, error};
 };
 
 export default UseFetch;

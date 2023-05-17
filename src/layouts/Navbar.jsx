@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { BsCart4 } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = ({cartItem}) => {
+ 
   return (
     <div className="sticky-top">
       <Marque></Marque>
@@ -11,16 +12,33 @@ const Navbar = () => {
         <header className="container d-flex justify-content-between align-items-center p-1">
           <ul>
             <li className="list-unstyled">
-              <Link className="text-decoration-none" to="/">
+              <Link className="text-decoration-underline text-white" to="/">
                 <h1 className="fst-italic text-light m-0">ABIMBOLA</h1>
               </Link>
             </li>
           </ul>
-          <nav>
-            <Link className="text-decoration-none text-light fs-3 d-flex align-items-center gap-2" to="/Cart">
-              <BsCart4 />
-              Cart
-            </Link>
+          <nav className="w-50 d-flex flex-row-reverse justify-content-between">
+            <ul className="d-sm-none d-md-flex justify-content-between w-75">
+              <li className="list-unstyled d-none-x-sm">
+                <Link className="text-decoration-none text-light fs-4" to="/">
+                  Account
+                </Link>
+              </li>
+              <li className="list-unstyled d-none-x-sm">
+                <Link className="text-decoration-none text-light fs-4" to="/">
+                  Help
+                </Link>
+              </li>
+              <li className="list-unstyled">
+                <Link
+                  className="text-decoration-none text-light fs-4 d-flex align-items-center gap-1"
+                  to="/Cart"
+                >
+                  <BsCart4/>
+                  Cart ({cartItem.length})
+                </Link>
+              </li>
+            </ul>
           </nav>
         </header>
       </div>

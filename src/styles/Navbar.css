@@ -1,3 +1,10 @@
 .navbar-content {
   background-color: #ed017f;
 }
+
+@media screen and (max-width: 575px) {
+  .d-none-x-sm {
+    display: none;
+  }
+}
+

@@ -1,0 +1,17 @@
+.single-btn {
+    width: 50%;
+}
+
+.single-img {
+    width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .single-btn {
+        width: 100%;
+    }
+
+    .single-img {
+        width: 80%;
+    }
+}
