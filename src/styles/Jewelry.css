@@ -1,0 +1,34 @@
+.component-title-jewelry {
+  background-color: #94004f;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jewelry-img {
+  height: 32.5rem;
+}
+
+.jewelry-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.jewelry-inner {
+  height: 100px;
+}
+
+.jewelry-inner img {
+  width: 7rem;
+  margin: auto;
+  height: 150px;
+}
+
+.jewelry {
+    margin-top: 10rem;
+}

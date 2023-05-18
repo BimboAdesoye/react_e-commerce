@@ -14,6 +14,7 @@ const Hero = () => {
     loading: loading2,
     error: error2,
   } = UseFetch("https://fakestoreapi.com/products/14");
+  
   const { data: data3, loading: loading3 } = UseFetch(
     "https://fakestoreapi.com/products/category/men's clothing"
   );
