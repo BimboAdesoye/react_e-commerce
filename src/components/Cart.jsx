@@ -28,11 +28,11 @@ const Cart = () => {
       setCartItem(cartItem.filter((oneItem) => oneItem.id !== product.id));
     } else {
       setCartItem(
-        cartItem.map((loneItem) => {
+        cartItem.map((loneItem) =>
           loneItem.id === product.id
             ? { ...productSelected, quantity: productSelected.quantity - 1 }
-            : loneItem;
-        })
+            : loneItem
+        )
       );
     }
   }
