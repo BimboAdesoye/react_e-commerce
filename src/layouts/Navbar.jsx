@@ -2,9 +2,11 @@ import Marque from "./Marque";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { BsCart4 } from "react-icons/bs";
+import { useContext, useState } from "react";
+import CartContext from "../Hooks/CartContext";
 
-const Navbar = ({cartItem}) => {
- 
+const Navbar = () => {
+  const { cartItem } = useContext(CartContext);
   return (
     <div className="sticky-top">
       <Marque></Marque>
@@ -34,7 +36,7 @@ const Navbar = ({cartItem}) => {
                   className="text-decoration-none text-light fs-4 d-flex align-items-center gap-1"
                   to="/Cart"
                 >
-                  <BsCart4/>
+                  <BsCart4 />
                   Cart ({cartItem.length})
                 </Link>
               </li>

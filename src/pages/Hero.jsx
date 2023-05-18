@@ -2,8 +2,13 @@ import UseFetch from "../Hooks/UseFetch";
 import ClipLoader from "react-spinners/ClipLoader";
 import "../styles/Hero.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { useContext } from "react";
+import CartContext from "../Hooks/CartContext";
 
-const Hero = ({ cartItem, setCartItem }) => {
+
+const Hero = () => {
+  const { handleAddToCart } = useContext(CartContext);
   const {
     data: data2,
     loading: loading2,
@@ -13,24 +18,11 @@ const Hero = ({ cartItem, setCartItem }) => {
     "https://fakestoreapi.com/products/category/men's clothing"
   );
 
-  function handleAddToCart(product) {
-    const productSelected = cartItem.find(
-      (singleCartItem) => singleCartItem.id === product.id
-    );
-    if (productSelected) {
-      setCartItem(
-        cartItem.map((oneItem) => {
-          oneItem.id === product.id
-            ? { ...productSelected, quantity: productSelected.quantity + 1 }
-            : oneItem;
-        })
-      );
-    } else {
-      setCartItem([...cartItem, { ...product, quantity: 1 }]);
-    }
-  }
-
-  console.log(cartItem.length);
+  const notify = () => {
+    toast.success("An item has been added !", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
 
   return (
     <div className="container hero-container">
@@ -59,11 +51,15 @@ const Hero = ({ cartItem, setCartItem }) => {
                     <p className="fw-bold">${price} </p>
                   </Link>
                   <button
-                    onClick={() => handleAddToCart(datum3)}
+                    onClick={() => {
+                      handleAddToCart(datum3);
+                      notify();
+                    }}
                     className="btn btn-primary text-white"
                   >
                     add to cart
                   </button>
+                  <ToastContainer />
                 </div>
               );
             })}

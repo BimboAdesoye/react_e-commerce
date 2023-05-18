@@ -1,11 +1,10 @@
 import "../styles/Home.css";
 import Hero from "../pages/Hero";
 
-
-const Home = ({cartItem, setCartItem}) => {
+const Home = () => {
   return (
     <div className="container">
-      <Hero cartItem={cartItem} setCartItem={setCartItem}/>
+      <Hero />
     </div>
   );
 };
