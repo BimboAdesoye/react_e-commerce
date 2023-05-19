@@ -7,9 +7,9 @@ import CartContext from "../Hooks/CartContext";
 import "../styles/Jewelry.css";
 
 const Jewelry = () => {
-  const { cartItem, setCartItem, handleAddToCart } = useContext(CartContext);
+  const { handleAddToCart } = useContext(CartContext);
 
-  const { data, error, loading } = UseFetch(
+  const { data, loading } = UseFetch(
     "https://fakestoreapi.com/products/category/jewelery"
   );
 

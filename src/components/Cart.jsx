@@ -24,6 +24,7 @@ const Cart = () => {
               key={id}
               className="row justify-content-between align-items-center mt-4"
             >
+              <hr></hr>
               <div className="col-md-5 text-center">
                 <img className="cart-img" src={image} alt={title} />
               </div>
@@ -55,18 +56,20 @@ const Cart = () => {
         })}
       </div>
       {cartItem.length >= 1 && (
-        <button 
+        <button
           onClick={() => setCartItem([])}
-          className="btn btn-danger clear-btn"
+          className="btn btn-danger clear-btn mt-5 btn-lg"
         >
           {cartItem.length === 1 ? "Clear Item" : "Clear All"}
         </button>
       )}
       <hr />
-      <div className="text-center">
-        <h2>Total Price</h2>
-        <p>${totalPrice}</p>
-      </div>
+      {cartItem.length >= 1 && (
+        <div className="text-center">
+          <h2>Total Price</h2>
+          <p className="fs-5 fw-bold">${totalPrice}</p>
+        </div>
+      )}
     </div>
   );
 };

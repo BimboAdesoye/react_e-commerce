@@ -34,10 +34,10 @@ const Electronics = () => {
                   <img src={image} alt="" />
                 </div>
               </Link>
-              <div className="elctronics-content">
+              <div className="electronics-content">
                 <div>
                   <h2 className="title">{title.slice(0, 35)}</h2>
-                  <p>{description.slice(0, 200)}</p>
+                  <p className="desc">{description.slice(0, 200)}</p>
                   <p className="fw-bold fs-3">${price}</p>
                   <p className="fw-bold">RATING: {rating.rate}</p>
                 </div>
@@ -47,7 +47,7 @@ const Electronics = () => {
                       handleAddToCart(datumElectronics);
                       notify();
                     }}
-                    className="btn btn-primary btn-lg text-uppercase fs-5 w-100"
+                    className="btn btn-primary btn-lg text-uppercase fs-5 electronics-btn"
                   >
                     Add to Cart
                   </button>
