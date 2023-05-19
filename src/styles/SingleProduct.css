@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.singleproduct {
+    padding: 69px 0;
+}
+
 @media screen and (max-width: 575px) {
     .single-btn {
         width: 100%;

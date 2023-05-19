@@ -21,7 +21,7 @@ const SingleProduct = () => {
   };
 
   return (
-    <div>
+    <div className="singleproduct">
       <div className="container">
         {loading && <ClipLoader />}
         <div className="row justify-content-center align-items-center mt-5">
