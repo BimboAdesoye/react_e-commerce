@@ -2,7 +2,7 @@ import Marque from "./Marque";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { BsCart4 } from "react-icons/bs";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import CartContext from "../Hooks/CartContext";
 
 const Navbar = () => {

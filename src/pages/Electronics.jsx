@@ -20,7 +20,7 @@ const Electronics = () => {
 
   return (
     <div className="container electronics">
-      <h2 className="text-center fw-bold text-uppercase">
+      <h2 className="text-center fw-bold text-uppercase electronics-header">
         Electronics Category
       </h2>
       <div className="electronics-inner">

@@ -1,5 +1,4 @@
 import UseFetch from "../Hooks/UseFetch";
-import { ClipLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ import "../styles/Jewelry.css";
 const Jewelry = () => {
   const { handleAddToCart } = useContext(CartContext);
 
-  const { data, loading } = UseFetch(
+  const { data } = UseFetch(
     "https://fakestoreapi.com/products/category/jewelery"
   );
 
@@ -21,7 +20,6 @@ const Jewelry = () => {
 
   return (
     <div className="container jewelry">
-      <h2>{loading && <ClipLoader />}</h2>
       <div className="component-title-jewelry">
         <h2>JEWELRY CATEGORY</h2>
       </div>
@@ -29,26 +27,28 @@ const Jewelry = () => {
         {data.map((datumJewelry) => {
           const { id, image, price, title } = datumJewelry;
           return (
-            <div
-              className="h-100 p-1 text-center jewelry-inner shadow-sm rounded border-3 border"
-              key={id}
-            >
+            <div className="jewelry-inner" key={id}>
               <Link
-                className="text-decoration-none"
+                className="text-decoration-none link"
                 to={`/SingleProduct/${id}`}
               >
-                <img className="img-fluid w-100" src={image} alt={title} />
-                <p className="fw-bold">${price} </p>
+                <div className="jewelry-img">
+                  <img className="" src={image} alt={title} />
+                </div>
+                <div className="jewelry-content">
+                  <p className="fw-bold">${price} </p>
+                  <p>{title}</p>
+                  <button
+                    onClick={() => {
+                      handleAddToCart(datumJewelry);
+                      notify();
+                    }}
+                    className="btn btn-primary text-white jewelry-btn"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
               </Link>
-              <button
-                onClick={() => {
-                  handleAddToCart(datumJewelry);
-                  notify();
-                }}
-                className="btn btn-primary text-white"
-              >
-                add to cart
-              </button>
               <ToastContainer />
             </div>
           );

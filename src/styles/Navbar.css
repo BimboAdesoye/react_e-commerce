@@ -2,6 +2,10 @@
   background-color: #ed017f;
 }
 
+.navbar-content h1:hover {
+  color: blue;
+}
+
 @media screen and (max-width: 575px) {
   .d-none-x-sm {
     display: none;

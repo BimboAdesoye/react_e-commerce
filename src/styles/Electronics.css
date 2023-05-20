@@ -1,50 +1,56 @@
 .electronics {
-    padding: 100px 0;
-    background-color: #f1f1f2;
+  padding: 100px 0;
+  background-color: #f1f1f2;
+}
+
+.electronics-header {
+  background-color: #94004f;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0.7rem;
 }
 
 .electronics-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 2rem;
-    column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+  column-gap: 2rem;
 }
 
 .electronics-card {
-    /* border: 1px solid red; */
-    padding: 10px;
-    display: flex;
-    /* gap: 1.5rem; */
-    margin: 1rem 0;
-    background-color: #fff;
-    border-radius: 10px;
-    transition: transform .3s ease-in-out;
+  padding: 10px;
+  display: flex;
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .electronics-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .electronics-card img {
-    width: 100%;
+  width: 100%;
 }
 
 .electronics-card .title {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .electronics-content {
-    width: 150%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 1.5rem;
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1.5rem;
 }
 
 .electronics-btn {
-    width: 100%;
-    flex-wrap: nowrap;
-    /* transition:  1s ease-in-out; */
+  width: 100%;
+  flex-wrap: nowrap;
+  /* transition:  1s ease-in-out; */
 }
 
 /* .electronics-btn:hover {
@@ -52,33 +58,32 @@
     bottom: 3px;
 } */
 
-
 @media screen and (max-width: 1024px) {
-    .electronics-card {
-        flex-direction: column;
-    }
+  .electronics-card {
+    flex-direction: column;
+  }
 
-    .electronics-inner {
-        grid-template-columns: 1fr;
-        margin: auto;
-    }
+  .electronics-inner {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
 
-    .electronics-image {
-        text-align: center;
-    }
+  .electronics-image {
+    text-align: center;
+  }
 
-    .electronics-image img {
-        width: 350px;
-    }
+  .electronics-image img {
+    width: 350px;
+  }
 
-    .electronics-content {
-        width: auto;
-        margin-left: 0;
-    }
+  .electronics-content {
+    width: auto;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 376px) {
-    .electronics-image img {
-        width: 250px;
-    }
+  .electronics-image img {
+    width: 250px;
+  }
 }

@@ -9,26 +9,55 @@
   justify-content: center;
 }
 
-.jewelry-img {
-  height: 32.5rem;
+.jewelry {
+  padding: 70px 0;
+  background-color: #f1f1f2;
 }
 
 .jewelry-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .jewelry-inner {
-  height: 100px;
+  background-color: #fff;
+  height: fit-content;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.jewelry-inner img {
-  width: 7rem;
-  margin: auto;
-  height: 150px;
+.jewelry-inner .jewelry-content {
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  color: white;
 }
 
-.jewelry {
-    margin-top: 10rem;
+.jewelry-img img {
+  width: 100%;
+}
+
+.jewelry-btn {
+  transition: position .3s ease-in;
+}
+
+.jewelry-btn:hover {
+  position: relative;
+  bottom: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .jewelry-container {
+    flex-direction: column;
+  }
+
+  .jewelry-img {
+    text-align: center;
+  }
+
+  .jewelry-img img {
+    width: 60%;
+  }
 }

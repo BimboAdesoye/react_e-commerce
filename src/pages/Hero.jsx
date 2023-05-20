@@ -11,7 +11,6 @@ const Hero = () => {
   const { handleAddToCart } = useContext(CartContext);
   const {
     data: data2,
-    loading: loading2,
     error: error2,
   } = UseFetch("https://fakestoreapi.com/products/14");
   
@@ -27,7 +26,7 @@ const Hero = () => {
 
   return (
     <div className="container hero-container">
-      <h2> {loading3 && <ClipLoader color={"red"} size={150} />}</h2>
+      <h2> {loading3 && <ClipLoader color={"red"} size={100} />}</h2>
       {error2 && <h2>{error2.message}</h2>}
 
       <div className="row justify-content-between gap-5">
