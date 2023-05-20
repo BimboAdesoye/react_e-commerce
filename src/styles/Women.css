@@ -1,0 +1,58 @@
+.women {
+  padding: 100px 0;
+  background-color: #f1f1f2;
+}
+
+.women-header {
+  background-color: #94004f;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.women-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.women-container {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.women-image {
+  text-align: center;
+}
+
+.women-image img {
+  width: 350px;
+  height: 300px;
+}
+
+.women-btn {
+  visibility: hidden;
+  transition: visibility 0.3s ease-in;
+  width: 100%;
+}
+
+.women-container:hover .women-btn {
+  visibility: visible;
+}
+
+.women-title {
+}
+
+@media screen and (max-width: 575px) {
+  .women-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .women-btn {
+    visibility: visible;
+  }
+}

@@ -20,7 +20,7 @@ const SingleProduct = () => {
     });
   };
 
-  return (
+  return ( 
     <div className="singleproduct">
       <div className="container">
         {loading && <ClipLoader />}
