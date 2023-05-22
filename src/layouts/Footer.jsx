@@ -2,6 +2,7 @@ import "../styles/Footer.css";
 import { dataFooter } from "../FooterDB";
 
 const Footer = () => {
+  const copyRightYear = new Date().getFullYear()
   return (
     <div className="footer bg-dark text-white mt-5">
       <div className="container d-lg-flex justify-content-between align-items-between p-5">
@@ -29,7 +30,7 @@ const Footer = () => {
         })}
       </div>
       <p className="container text-center m-auto">
-        Copyright &copy; 2022 Abimbola{" "}
+        Copyright &copy; {copyRightYear} ABIMBOLA.com All rights reserved{" "}
       </p>
     </div>
   );
