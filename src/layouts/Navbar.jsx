@@ -33,7 +33,7 @@ const Navbar = () => {
               </li>
               <li className="list-unstyled">
                 <Link
-                  className="text-decoration-none text-light fs-4 d-flex align-items-center gap-1"
+                  className="nav-cart text-decoration-none text-light fs-4 d-flex align-items-center gap-1"
                   to="/Cart"
                 >
                   <BsCart4 />

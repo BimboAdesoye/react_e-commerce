@@ -30,7 +30,7 @@
 }
 
 .women-image img {
-  width: 350px;
+  width: auto;
   height: 300px;
 }
 
@@ -44,10 +44,7 @@
   visibility: visible;
 }
 
-.women-title {
-}
-
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .women-inner {
     grid-template-columns: 1fr;
   }
