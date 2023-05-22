@@ -30,7 +30,7 @@ const Footer = () => {
         })}
       </div>
       <p className="container text-center m-auto">
-        Copyright &copy; {copyRightYear} ABIMBOLA.com All rights reserved{" "}
+        Copyright &copy; {copyRightYear} ABIMBOLA.com All rights reserved
       </p>
     </div>
   );
