@@ -35,13 +35,7 @@
 }
 
 .women-btn {
-  visibility: hidden;
-  transition: visibility 0.3s ease-in;
   width: 100%;
-}
-
-.women-container:hover .women-btn {
-  visibility: visible;
 }
 
 @media screen and (max-width: 768px) {
@@ -53,3 +47,4 @@
     visibility: visible;
   }
 }
+

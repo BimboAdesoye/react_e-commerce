@@ -16,16 +16,23 @@
 
 .jewelry-container {
   margin-top: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .jewelry-inner {
   background-color: #fff;
-  height: fit-content;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.jewelry-img {
+  text-align: center;
+}
+
+.jewelry-img img {
+  height: 15rem;
 }
 
 .jewelry-inner .jewelry-content {
@@ -33,11 +40,9 @@
   width: 100%;
   padding: 1rem;
   color: white;
+  height: 100%;
 }
 
-.jewelry-img img {
-  width: 100%;
-}
 
 .jewelry-btn {
   transition: position .3s ease-in;
@@ -50,14 +55,6 @@
 
 @media screen and (max-width: 768px) {
   .jewelry-container {
-    flex-direction: column;
-  }
-
-  .jewelry-img {
-    text-align: center;
-  }
-
-  .jewelry-img img {
-    width: 60%;
+    grid-template-columns: 1fr;
   }
 }

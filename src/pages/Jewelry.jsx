@@ -33,7 +33,7 @@ const Jewelry = () => {
                 to={`/SingleProduct/${id}`}
               >
                 <div className="jewelry-img">
-                  <img className="" src={image} alt={title} />
+                  <img className="img-fluid" src={image} alt={title} />
                 </div>
                 <div className="jewelry-content">
                   <p className="fw-bold">${price} </p>

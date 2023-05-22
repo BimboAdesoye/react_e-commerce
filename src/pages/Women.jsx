@@ -32,18 +32,15 @@ const Women = () => {
                 <div className="women-image">
                   <img className="" src={image} alt="" />
                 </div>
-                <hr />
+                {/* <hr /> */}
                 <div className="women-content">
-                    <p className="women-title fw-bold fs-5">{title}</p>
-                    <p className="women-price fw-bold fs-3">${price}</p>
-                    <p className="women-desc fst-italic fw-bold">
+                    {/* <p className="women-title fw-bold fs-5">{title}</p> */}
+                    <p className="women-price fw-bold fs-5 text-center">${price}</p>
+                    {/* <p className="women-desc fst-italic fw-bold">
                       {description.slice(0, 100)}
-                    </p>
-                    <p className="women-rating fw-bold fs-4">
-                      RATING: {rating.rate}
-                    </p>
+                    </p> */}
                     <button
-                      className="btn btn-primary btn-lg women-btn"
+                      className="btn btn-primary women-btn"
                       onClick={() => {
                         handleAddToCart(datumWomen);
                         notify();
