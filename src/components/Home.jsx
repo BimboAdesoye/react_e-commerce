@@ -3,6 +3,7 @@ import Hero from "../pages/Hero";
 import Jewelry from "../pages/Jewelry";
 import Electronics from "../pages/Electronics";
 import Women from "../pages/Women";
+import LastPage from "../pages/LastPage";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Jewelry/>
       <Electronics/>
       <Women></Women>
+      <LastPage></LastPage>
     </div>
   );
 };
